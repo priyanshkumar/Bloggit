@@ -1,6 +1,23 @@
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+}
+
 /* bg img */
 #hero {
-  background: url("../images/pimg1.jpeg");
+  background: url("../images/hero-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+#signup-block {
+  background: url("../images/signup-hero.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,5 +42,9 @@
 
 .bg-content {
   font-size: 1.5rem;
-  color: white;
+  color: #707070;
+}
+
+#top-logo {
+  width: 150px;
 }
