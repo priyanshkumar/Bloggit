@@ -38,35 +38,48 @@
         <a class="ml-5 navbar-brand" href="index.html"
           ><img id="top-logo" src="./assets/images/bloggit-logo.png"
         /></a>
-        <div class="mr-5 links d-flex justify-content-center">
+        <div class="mr-5 links d-flex justify-conten-center">
           <a class="nav-link" href="#">Login</a>
-          <a href="signup.html" class="nav-link btn-primary" type="button">
-            Get Started
-          </a>
+          <button class="nav-link btn-primary" href="#">Get Started</button>
         </div>
       </nav>
       <section
-        id="hero"
+        id="signup-block"
         class="row m-0 d-flex align-items-center position-relative"
       >
         <div class="col-12 col-md-6 ml-5">
-          <img class="pb-4" src="./assets/images/bloggit-logo.png" />
-          <p
-            class="bg-content mb-4
-          "
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            consectetur sed adipisci officia sit quae nulla non sapiente
-            molestiae architecto.
-          </p>
-          <div class="bg-button">
-            <a
-              href="signup.html"
-              class="nav-link btn-primary btn-small"
-              type="button"
-            >
-              Get Started
-            </a>
+          <div class="card">
+            <h5 class="card-header">Sign up</h5>
+            <div class="card-body">
+              <h5 class="card-title">Enter your login details</h5>
+              <form class="form-group" action="">
+                <label>User name: </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Enter your name"
+                />
+                <br />
+                <label>Email: </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="example@example.com"
+                />
+                <br />
+                <label>Password: </label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder=""
+                />
+                <br />
+                <a href="#" class="btn btn-primary">Create Username!</a>
+              </form>
+            </div>
           </div>
         </div>
       </section>
