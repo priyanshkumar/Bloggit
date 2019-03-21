@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Bloggit
+      Display Blogs
     </title>
 
     <!-- Bootstrap CDN -->
@@ -13,8 +13,7 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -25,33 +24,30 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Merriweather"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"/>
   </head>
   <body>
     <div class="container-fluid p-0">
-      <nav
-        class="nav-div navbar position-absolute sticky-top navbar-light bg-white"
-      >
-        <a class="ml-5 navbar-brand" href="index.html"
-          ><img id="top-logo" src="./assets/images/bloggit-logo.png"
-        /></a>
+      <nav class="nav-div navbar position-absolute sticky-top navbar-light bg-white">
+        <a class="ml-5 navbar-brand" href="index.html"><img id="top-logo" src="./assets/images/bloggit-logo.png"/></a>
         <div class="mr-5 links d-flex justify-content-center">
-          <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="#">Login</a>
           <button class="nav-link btn-primary" href="#">Get Started</button>
         </div>
       </nav>
-      <section id="display-blogs" class="row mt-5 pt-5 d-flex position-relative">
-
-                           <div class="col-lg-8 text-center"><h1> Saved Blogs</h1>  </div>
-                           <div class="col-lg-4"> 
-                               <button class="btn btn-primary ">Display</button>
-                             </div>   
-                             <div id="saved-blogs-list"></div>
-  
-      </section>
     </div>
+      <section id="display-blogs" class="row mt-5 pt-5 d-flex position-relative">
+               <div class="col-lg-8 text-center"><h1> Saved Blogs</h1>  </div>
+               <div class="col-lg-4"> 
+                    <button class="btn btn-primary ">Display</button>
+               </div>   
+                    <div id="saved-blogs-list"></div>
+      </section>
+    <hr class="mb-4">
+    <footer class="footer mt-auto py-3 text-center">
+        <div class="container">
+          <span class="text-muted">&copy 2019 Bloggit</span>
+        </div>
+      </footer>
   </body>
 </html>
