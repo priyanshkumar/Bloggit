@@ -25,6 +25,8 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather"
       rel="stylesheet"
@@ -32,47 +34,70 @@
   </head>
   <body>
     <div class="container-fluid p-0">
-
-      <nav class="nav-div navbar position-absolute sticky-top navbar-light bg-white">
-        <a class="ml-5 navbar-brand" href="index.html"><img id="top-logo" src="./assets/images/bloggit-logo.png"/></a>
-        <div class="mr-5 links d-flex justify-content-center">
-          <a class="nav-link" href="#">Login</a>
-          <button class="nav-link btn-primary" href="#">Get Started</button>
+      <nav class="nav-div navbar sticky-top navbar-light bg-white">
+        <a class="ml-5 navbar-brand" href="index.html"
+          ><img id="top-logo" src="./assets/images/bloggit-logo.png"
+        /></a>
+        <div class="mr-5 d-flex justify-content-center">
+          <a class="nav-link" href="#">Search</a>
+          <a class="nav-link" href="#">Blogs</a>
+          <a class="nav-link" href="#">Create Blogs</a>
+          <a class="nav-link btn-primary" href="#">Sign Out</a>
         </div>
       </nav>
 
+      <hr class="m-0" />
 
-     
-               
+      <div class="container border my-4">
+        <div class="row my-4">
+          <div class="col-12">
+            <div class="jumbotron m-0 text-center">
+              <h1 class="jumbotron-heading">Start creating your own blog!</h1>
+            </div>
+          </div>
+        </div>
 
-    </div>  
-      <main id="search-blog" class="row d-flex h-300" style="margin-top: 10%;">
-            <div class="col-sm-6 offset-sm-3 text-center">     
-            <form role="form" id="form-buscar">
-                    <div class="form-group">
-                    <div class="input-group">
-                    <input id="search" class="form-control" type="text" name="search" placeholder="Search..." required/>
-                    <span class="input-group-btn">
-                    <button class="btn btn-success" type="submit">
-                    <i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search
-                    </button>
-                    </span>
-                    </div>
-                    </div>
-                    </form>  
-                    <div class="row"></div>          
-            </div>  
-                          
-      </main>
-   
-    
-    <div class="fixed-bottom">
-     <hr class="mb-4">
-    <footer class="footer text-center">
-          <span class="text-muted">&copy 2019 Bloggit</span>
+        <div class="row mt-4 d-flex justify-content-center">
+          <div class="col-10">
+            <div class="form-group px-4 d-flex">
+              <input
+                class="form-control mr-2"
+                type="text"
+                placeholder="Search..."
+                required
+              />
+              <a class="btn btn-success">
+                Search
+              </a>
+            </div>
+            <hr />
+          </div>
+        </div>
+
+        <div class="row mb-4 px-4">
+          <div class="col-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            voluptates aliquam magnam error id eligendi beatae, modi debitis et
+            nihil velit! Possimus voluptatibus voluptatum ipsum ducimus iusto
+            saepe eveniet hic, amet, explicabo, unde exercitationem dicta
+            expedita mollitia doloremque voluptatem voluptates ut optio
+            recusandae reprehenderit et laboriosam ratione ex corrupti eius.
+            Facere ducimus fugiat, eaque nostrum voluptatem dignissimos autem
+            fuga sed itaque quibusdam quos adipisci reiciendis vitae consequatur
+            exercitationem nesciunt. Libero sapiente aspernatur, saepe optio
+            quasi numquam nemo magni assumenda nihil rem perferendis laborum,
+            non at tempora amet hic ullam voluptas magnam iste eveniet mollitia.
+            Reprehenderit ex dolorem voluptates optio maxime?
+          </div>
+        </div>
+      </div>
+
+      <footer class="row py-4 footer-css fixed-bottom">
+        <hr class="m-0" />
+        <div class="col-12">
+          <h6 class="text-center text-muted">&copy 2019 Bloggit</h6>
+        </div>
       </footer>
-
     </div>
-   
   </body>
 </html>
