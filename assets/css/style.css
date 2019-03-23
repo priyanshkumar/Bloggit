@@ -30,7 +30,13 @@ body {
 
 /* navigation */
 .nav-div {
+  width: 98.756vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-before-login {
   width: 100vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #top-logo {

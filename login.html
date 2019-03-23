@@ -39,55 +39,58 @@
   <body>
     <div class="container-fluid p-0">
       <nav
-        class="nav-div navbar position-absolute sticky-top navbar-light bg-white"
+        class="nav-before-login navbar position-absolute sticky-top navbar-light bg-white"
       >
-        <a class="ml-5 navbar-brand" href="index.html"
+        <a class="ml-5 navbar-brand" href="./index.html"
           ><img id="top-logo" src="./assets/images/bloggit-logo.png"
         /></a>
         <div class="mr-5 links d-flex justify-content-center">
-          <a class="nav-link" href="#">Login</a>
-          <button class="nav-link btn-primary" href="#">Get Started</button>
+          <a class="nav-link" href="./login.html">Login</a>
+          <a class="nav-link btn-primary" href="./signup.html">Get Started</a>
         </div>
       </nav>
       <section
         id="signup-block"
-        class="row m-0 d-flex align-items-center position-relative"
+        class="row m-0 d-flex align-items-center justify-content-center position-relative"
       >
-        <div class="col-12 col-md-6 ml-5">
+        <div class="col-12 col-md-3 p-0">
           <div class="card">
             <h5 class="card-header">Log in</h5>
             <div class="card-body">
               <h5 class="card-title">Sign in with your email</h5>
-              <form class="form-group" action="">
-                <br />
-                <label>Email: </label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="example@example.com"
-                />
-                <br />
-                <label>Password: </label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder=""
-                />
-                <br />
-                <a href="#" id="login-user" class="btn btn-primary">Login!</a>
+              <form>
+                <div class="my-2">
+                  <label>Email: </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="example@example.com"
+                  />
+                </div>
+                <div class="my-2">
+                  <label>Password: </label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder=""
+                  />
+                </div>
+                <a href="#" id="login-user" class="btn btn-primary mt-2"
+                  >Login!
+                </a>
               </form>
             </div>
           </div>
         </div>
       </section>
+
+      <footer class="row mx-0 py-4 footer-css fixed-bottom">
+        <div class="col-12">
+          <h6 class="text-center text-muted">&copy 2019 Bloggit</h6>
+        </div>
+      </footer>
     </div>
-    <hr class="mb-4" />
-    <footer class="footer mt-auto py-3 text-center fixed-bottom">
-      <div class="container">
-        <span class="text-muted">&copy 2019 Bloggit</span>
-      </div>
-    </footer>
   </body>
 </html>

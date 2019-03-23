@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Create Blog
+      Bloggit | Search Blog
     </title>
 
     <!-- Bootstrap CDN -->
@@ -35,17 +35,16 @@
   <body>
     <div class="container-fluid p-0">
       <nav class="nav-div navbar sticky-top navbar-light bg-white">
-        <a class="ml-5 navbar-brand" href="index.html"
+        <a class="ml-5 navbar-brand" href="./indexafterlogin.html"
           ><img id="top-logo" src="./assets/images/bloggit-logo.png"
         /></a>
         <div class="mr-5 d-flex justify-content-center">
-          <a class="nav-link" href="#">Search</a>
-          <a class="nav-link" href="#">Blogs</a>
-          <a class="nav-link" href="#">Create Blogs</a>
-          <a class="nav-link btn-primary" href="#">Sign Out</a>
+          <a class="nav-link" href="./apilist.html">Search</a>
+          <a class="nav-link" href="./bloglist.html">Blogs</a>
+          <a class="nav-link" href="./create.html">Create Blogs</a>
+          <a class="nav-link btn-primary" href="./index.html">Sign Out</a>
         </div>
       </nav>
-      <hr class="m-0" />
 
       <div class="container border my-4">
         <div class="row my-4">
@@ -56,45 +55,42 @@
           </div>
         </div>
 
-        <form class="mb-4">
-          <div class="row d-flex justify-content-center">
-            <div class="col-10">
-              <label for="blogTitle">Title</label>
-              <input type="text" class="form-control" id="blogName" required />
-            </div>
-          </div>
-          <div class="row my-2 d-flex justify-content-center">
-            <div class="col-10">
-              <label for="address">Content</label>
-              <textarea
-                class="form-control"
-                rows="10"
-                placeholder="add content here."
-                required
-              ></textarea>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-10">
-              <label for="blogTitle">Published By</label>
+        <div class="row mt-4 d-flex justify-content-center">
+          <div class="col-10">
+            <div class="form-group px-4 d-flex">
               <input
+                class="form-control mr-2"
                 type="text"
-                class="w-25 form-control"
-                id="blogName"
+                placeholder="Search..."
                 required
               />
+              <a class="btn btn-success">
+                Search
+              </a>
             </div>
+            <hr />
           </div>
-          <div class="row mt-3 d-flex justify-content-center">
-            <div class="col-10">
-              <button class="btn btn-primary" type="submit">Submit</button>
-            </div>
+        </div>
+
+        <div class="row mb-4 px-4">
+          <div class="col-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            voluptates aliquam magnam error id eligendi beatae, modi debitis et
+            nihil velit! Possimus voluptatibus voluptatum ipsum ducimus iusto
+            saepe eveniet hic, amet, explicabo, unde exercitationem dicta
+            expedita mollitia doloremque voluptatem voluptates ut optio
+            recusandae reprehenderit et laboriosam ratione ex corrupti eius.
+            Facere ducimus fugiat, eaque nostrum voluptatem dignissimos autem
+            fuga sed itaque quibusdam quos adipisci reiciendis vitae consequatur
+            exercitationem nesciunt. Libero sapiente aspernatur, saepe optio
+            quasi numquam nemo magni assumenda nihil rem perferendis laborum,
+            non at tempora amet hic ullam voluptas magnam iste eveniet mollitia.
+            Reprehenderit ex dolorem voluptates optio maxime?
           </div>
-        </form>
+        </div>
       </div>
 
-      <footer class="row py-4 footer-css fixed-bottom">
-        <hr class="m-0" />
+      <footer class="row mt-4 mx-0 py-4 footer-css ">
         <div class="col-12">
           <h6 class="text-center text-muted">&copy 2019 Bloggit</h6>
         </div>
