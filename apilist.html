@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Display Blogs
+      Search Blog
     </title>
 
     <!-- Bootstrap CDN -->
@@ -35,14 +35,14 @@
   <body>
     <div class="container-fluid p-0">
       <nav class="nav-div navbar sticky-top navbar-light bg-white">
-        <a class="ml-5 navbar-brand" href="index.html"
+        <a class="ml-5 navbar-brand" href="./indexafterlogin.html"
           ><img id="top-logo" src="./assets/images/bloggit-logo.png"
         /></a>
         <div class="mr-5 d-flex justify-content-center">
-          <a class="nav-link" href="#">Search</a>
-          <a class="nav-link" href="#">Blogs</a>
-          <a class="nav-link" href="#">Create Blogs</a>
-          <a class="nav-link btn-primary" href="#">Sign Out</a>
+          <a class="nav-link" href="./apilist.html">Search</a>
+          <a class="nav-link" href="./bloglist.html">Blogs</a>
+          <a class="nav-link" href="./create.html">Create Blogs</a>
+          <a class="nav-link btn-primary" href="./index.html">Sign Out</a>
         </div>
       </nav>
 
@@ -56,6 +56,24 @@
             </div>
           </div>
         </div>
+
+        <div class="row mt-4 d-flex justify-content-center">
+          <div class="col-10">
+            <div class="form-group px-4 d-flex">
+              <input
+                class="form-control mr-2"
+                type="text"
+                placeholder="Search..."
+                required
+              />
+              <a class="btn btn-success">
+                Search
+              </a>
+            </div>
+            <hr />
+          </div>
+        </div>
+
         <div class="row mb-4 px-4">
           <div class="col-12">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
