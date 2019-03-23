@@ -15,12 +15,18 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery.js"></script>
 
+    <!-- Moment CDN -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
     <!-- JS script -->
     <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/bloglist.js"></script>
 
     <!-- CSS link -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -52,25 +58,12 @@
         <div class="row my-4">
           <div class="col-12">
             <div class="jumbotron m-0 text-center">
-              <h1 class="jumbotron-heading">Start creating your own blog!</h1>
+              <h1 class="jumbotron-heading">Saved Blogs!</h1>
             </div>
           </div>
         </div>
         <div class="row mb-4 px-4">
-          <div class="col-12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            voluptates aliquam magnam error id eligendi beatae, modi debitis et
-            nihil velit! Possimus voluptatibus voluptatum ipsum ducimus iusto
-            saepe eveniet hic, amet, explicabo, unde exercitationem dicta
-            expedita mollitia doloremque voluptatem voluptates ut optio
-            recusandae reprehenderit et laboriosam ratione ex corrupti eius.
-            Facere ducimus fugiat, eaque nostrum voluptatem dignissimos autem
-            fuga sed itaque quibusdam quos adipisci reiciendis vitae consequatur
-            exercitationem nesciunt. Libero sapiente aspernatur, saepe optio
-            quasi numquam nemo magni assumenda nihil rem perferendis laborum,
-            non at tempora amet hic ullam voluptas magnam iste eveniet mollitia.
-            Reprehenderit ex dolorem voluptates optio maxime?
-          </div>
+          <div id="savedblogs" class="col-12"></div>
         </div>
       </div>
 

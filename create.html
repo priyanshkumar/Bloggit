@@ -15,12 +15,19 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery.js"></script>
 
+    <!-- Moment CDN -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
     <!-- JS script -->
     <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/auth.js"></script>
+    <script src="./assets/javascript/createblog.js"></script>
 
     <!-- CSS link -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -60,7 +67,7 @@
           <div class="row d-flex justify-content-center">
             <div class="col-10">
               <label for="blogTitle">Title</label>
-              <input type="text" class="form-control" id="blogName" required />
+              <input type="text" class="form-control" id="blogtitle" required />
             </div>
           </div>
           <div class="row my-2 d-flex justify-content-center">
@@ -68,6 +75,7 @@
               <label for="address">Content</label>
               <textarea
                 class="form-control"
+                id="blogmessage"
                 rows="10"
                 placeholder="add content here."
                 required
@@ -80,14 +88,20 @@
               <input
                 type="text"
                 class="w-25 form-control"
-                id="blogName"
+                id="bloggername"
                 required
               />
             </div>
           </div>
           <div class="row mt-3 d-flex justify-content-center">
             <div class="col-10">
-              <button class="btn btn-primary" type="submit">Submit</button>
+              <button
+                class="btn btn-primary"
+                id="createblogsubmit"
+                type="submit"
+              >
+                Submit
+              </button>
             </div>
           </div>
         </form>
