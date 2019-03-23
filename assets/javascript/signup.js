@@ -15,25 +15,31 @@ $(document).ready(function() {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-      });
-
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
+      .then(function() {
+        var user = firebase.auth().currentUser;
+        if (user != null) {
+          firebase
+            .database()
+            .ref("users/" + user.uid)
+            .set({
+              email: user.email,
+              uid: user.uid,
+              userName: userName
+            });
+          sessionStorage.setItem("userName", userName);
+        }
+      })
+      .then(function() {
         firebase
           .database()
-          .ref("users/" + user.uid)
-          .set({
-            email: user.email,
-            uid: user.uid,
-            userName: userName
+          .ref("users/")
+          .on("value", function() {
+            window.location = "./indexafterlogin.html";
           });
-        sessionStorage.setItem("userName", userName);
-      }
-    });
+      })
+      .catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
   });
 });
