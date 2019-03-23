@@ -12,25 +12,21 @@ $(document).ready(function() {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(function(res) {
-        console.log("Login");
         var userId = firebase.auth().currentUser.uid;
         firebase
           .database()
           .ref("/users/" + userId)
           .once("value")
           .then(function(snapshot) {
+            $("#email").val("");
             var userName = snapshot.val().userName || "Anonymous";
             sessionStorage.setItem("userName", userName);
-            console.log(sessionStorage.getItem("userName"));
-            // window.location = "./redirect.html";
-            // ...
+            window.location = "./indexafterlogin.html";
           });
       })
       .catch(function(error) {
-        // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
       });
   });
 });
