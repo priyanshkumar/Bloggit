@@ -63,3 +63,29 @@ body {
   font-size: 1.5rem;
   color: #707070;
 }
+
+.savedblogsclass1 {
+  background-color: #cde0ec;
+  padding: 10px;
+  border-bottom: 1px solid #b4b4b4;
+  font-size: 14px;
+  color: #0e0238;
+}
+.bloglistsubDiv {
+  display: flex;
+}
+.dummyDivdisplay {
+}
+
+.savedblogsclass2 {
+  background-color: #e6e7e7;
+  padding: 10px;
+  border-bottom: 1px solid #c7c6c6;
+  font-size: 14px;
+  color: #05220d;
+}
+.showhidebtn {
+  background-color: #427ae0;
+  color: white;
+  border: 1px solid white;
+}
