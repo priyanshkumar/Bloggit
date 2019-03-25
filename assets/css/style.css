@@ -43,6 +43,14 @@ body {
   width: 150px;
 }
 
+#savedblogsbanner {
+  background: url("../images/tech-regulation.jpg");
+  background-position: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px gray;
+}
+
 /* Footer */
 .footer-css {
   background-color: #e2e2e2;
@@ -73,6 +81,8 @@ body {
 }
 .bloglistsubDiv {
   display: flex;
+  font-weight: normal;
+  font-size: 16px;
 }
 .dummyDivdisplay {
 }

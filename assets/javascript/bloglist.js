@@ -49,9 +49,10 @@ $(document).ready(function() {
     if (i > 2) {
       i = 1;
     }
-    //$(".dummyDivdisplay").hide();
-    $(document).on("click", ".showhidebtn", function() {
-      $(".dummyDivdisplay").toggle();
-    });
+    $(".dummyDivdisplay").hide();
   }); //-----------------firebase ref end
+
+  $(document).on("click", ".showhidebtn", function() {
+    $(".dummyDivdisplay").toggle();
+  });
 }); //------------------------document ready end
