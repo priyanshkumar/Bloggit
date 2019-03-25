@@ -60,7 +60,12 @@
               <form>
                 <div class="mb-2">
                   <label>User name</label>
-                  <input type="text" class="form-control" id="username" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    required
+                  />
                 </div>
                 <div class="my-2">
                   <label>Email: </label>
@@ -69,15 +74,22 @@
                     class="form-control"
                     id="email"
                     placeholder="example@example.com"
+                    required
                   />
                 </div>
                 <div class="my-2">
                   <label>Password: </label>
-                  <input type="password" class="form-control" id="password" />
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    required
+                  />
                 </div>
-                <a id="create-user" class="btn btn-primary my-2"
-                  >Create User!</a
-                >
+                <a id="create-user" class="btn btn-primary my-2">
+                  Create User!
+                </a>
+                <div class="message"></div>
               </form>
             </div>
           </div>

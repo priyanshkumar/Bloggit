@@ -38,8 +38,12 @@ $(document).ready(function() {
           });
       })
       .catch(function(error) {
+        var a = $(".message");
         var errorCode = error.code;
         var errorMessage = error.message;
+        a.addClass("mt-2 text-center");
+        a.css("color", "red");
+        a.text(errorMessage);
       });
   });
 });
