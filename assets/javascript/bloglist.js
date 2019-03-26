@@ -12,39 +12,49 @@ $(document).ready(function() {
 
     //adding a class for each section of the blog
     var bloglistDiv = $("<div>");
-    bloglistDiv.addClass("savedblogsclass" + i);
+    bloglistDiv.addClass("p-4 savedblogsclass" + i);
 
     //adding a class for title, blogger name, date and show/hide button
     var bloglistsubDiv = $("<div>");
     bloglistsubDiv.addClass("bloglistsubDiv");
 
+    var publishedDetails = $("<div>");
+    publishedDetails.addClass("d-flex justify-content-center");
+
+    var button = $("<div>");
+    button.addClass("d-flex justify-content-center");
+
     var blogtitleDiv = $("<div>");
-    blogtitleDiv.append("Title: <strong>" + blogTitle + "</strong>");
+    blogtitleDiv.css("font-size", "1.4rem");
+    blogtitleDiv.append("<strong>" + blogTitle + "</strong>");
 
     var bloggernameDiv = $("<div>");
-    bloggernameDiv.append("by: ", bloggerName);
+    bloggernameDiv.addClass("mr-2");
+    bloggernameDiv.append("<em>" + bloggerName + "</em>");
 
     var blogdateDiv = $("<div>");
-    blogdateDiv.append("Published on: ", blogDate + "     ");
+    blogdateDiv.append("<em>" + blogDate + "</em>");
 
     var showhidebtn = $("<button>");
 
-    showhidebtn.addClass("showhidebtn");
+    showhidebtn.addClass("showhidebtn btn btn-primary mr-2");
     showhidebtn.attr("uid", id);
-    showhidebtn.text("Show/Hide Blog");
+    showhidebtn.text("Show More");
 
-    $(blogtitleDiv).css("margin-right", "30px");
+    var editbtn = $("<button>");
 
-    $(bloggernameDiv).css("margin-right", "30px");
+    editbtn.addClass("editbtn btn btn-success");
+    editbtn.attr("eid", id);
+    editbtn.text("Edit");
 
-    $(blogdateDiv).css("margin-right", "30px");
     //seperate div for the blog message to aviod flexbox alignment
+    publishedDetails.append(bloggernameDiv, blogdateDiv);
 
+    button.append(showhidebtn, editbtn);
     bloglistsubDiv
       .append(blogtitleDiv)
-      .append(bloggernameDiv)
-      .append(blogdateDiv)
-      .append(showhidebtn);
+      .append(publishedDetails)
+      .append(button);
     bloglistDiv.append(bloglistsubDiv);
 
     $("#savedblogs").append(bloglistDiv);
@@ -62,7 +72,7 @@ $(document).ready(function() {
       .database()
       .ref("/blogs/" + uid)
       .on("value", function(res) {
-        output = res.val();
+        var output = res.val();
         sessionStorage.setItem("title", output.blogtitle);
         sessionStorage.setItem("content", output.blogmessage);
         sessionStorage.setItem("name", output.bloggername);
@@ -70,5 +80,24 @@ $(document).ready(function() {
       });
 
     window.location = "./displayBlog.html";
+  });
+
+  $(document).on("click", ".editbtn", function() {
+    var eid = $(this).attr("eid");
+
+    firebase
+      .database()
+      .ref("/blogs/" + eid)
+      .on("value", function(res) {
+        var output = res.val();
+
+        sessionStorage.setItem("editTitle", output.blogtitle);
+        sessionStorage.setItem("editMessage", output.blogmessage);
+        sessionStorage.setItem("editName", output.bloggername);
+        sessionStorage.setItem("editDate", output.date);
+        sessionStorage.setItem("eid", eid);
+
+        window.location = "./create.html";
+      });
   });
 }); //------------------------document ready end
