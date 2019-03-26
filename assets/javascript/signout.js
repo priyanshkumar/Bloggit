@@ -4,7 +4,9 @@ $(document).ready(function() {
       .auth()
       .signOut()
       .then(function() {
-        window.location = "./index.html";
+        if (sessionStorage === null) {
+          window.location = "./index.html";
+        }
       })
       .catch(function(error) {
         console.log(error);

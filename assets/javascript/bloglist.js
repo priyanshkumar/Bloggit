@@ -7,40 +7,61 @@ $(document).ready(function() {
     var blogMessage = sv.blogmessage;
     var bloggerName = sv.bloggername;
     var blogDate = sv.date;
+    var id = sv.id;
     //console.log(blogTitle, blogMessage, bloggerName);
 
     //adding a class for each section of the blog
     var bloglistDiv = $("<div>");
-    bloglistDiv.addClass("savedblogsclass" + i);
+    bloglistDiv.addClass("p-4 savedblogsclass" + i);
+
     //adding a class for title, blogger name, date and show/hide button
     var bloglistsubDiv = $("<div>");
     bloglistsubDiv.addClass("bloglistsubDiv");
-    var blogtitleDiv = $("<div>");
-    blogtitleDiv.append("Title: <strong>" + blogTitle + "</strong>");
-    var bloggernameDiv = $("<div>");
-    bloggernameDiv.append("by: ", bloggerName);
-    var blogdateDiv = $("<div>");
-    blogdateDiv.append("Published on: ", blogDate + "     ");
-    var showhidebtn = $("<button>");
-    showhidebtn.addClass("showhidebtn");
-    showhidebtn.text("Show/Hide Blog");
-    $(blogtitleDiv).css("margin-right", "30px");
-    $(bloggernameDiv).css("margin-right", "30px");
-    $(blogdateDiv).css("margin-right", "30px");
-    //seperate div for the blog message to aviod flexbox alignment
-    var dummyDiv = $("<div>");
-    dummyDiv.addClass("dummyDivdisplay");
-    var blogmessageDiv = $("<div>");
-    blogmessageDiv.append(blogMessage);
-    dummyDiv.append(blogmessageDiv);
 
+    var publishedDetails = $("<div>");
+    publishedDetails.addClass("d-flex justify-content-center");
+
+    var button = $("<div>");
+    button.addClass("d-flex justify-content-center");
+
+    var blogtitleDiv = $("<div>");
+    blogtitleDiv.css("font-size", "1.4rem");
+    blogtitleDiv.append("<strong>" + blogTitle + "</strong>");
+
+    var bloggernameDiv = $("<div>");
+    bloggernameDiv.addClass("mr-2");
+    bloggernameDiv.append("<em>" + bloggerName + "</em>");
+
+    var blogdateDiv = $("<div>");
+    blogdateDiv.append("<em>" + blogDate + "</em>");
+
+    var showhidebtn = $("<button>");
+
+    showhidebtn.addClass("showhidebtn btn btn-primary mr-2");
+    showhidebtn.attr("uid", id);
+    showhidebtn.text("show more");
+
+    var editbtn = $("<button>");
+
+    editbtn.addClass("editbtn mr-2 btn btn-success");
+    editbtn.attr("eid", id);
+    editbtn.text("edit");
+
+    var deletebtn = $("<button>");
+
+    deletebtn.addClass("deletebtn btn btn-danger");
+    deletebtn.attr("dlid", id);
+    deletebtn.text("delete");
+
+    //seperate div for the blog message to aviod flexbox alignment
+    publishedDetails.append(bloggernameDiv, blogdateDiv);
+
+    button.append(showhidebtn, editbtn, deletebtn);
     bloglistsubDiv
       .append(blogtitleDiv)
-      .append(bloggernameDiv)
-      .append(blogdateDiv)
-      .append(showhidebtn);
+      .append(publishedDetails)
+      .append(button);
     bloglistDiv.append(bloglistsubDiv);
-    bloglistDiv.append(dummyDiv);
 
     $("#savedblogs").append(bloglistDiv);
 
@@ -49,10 +70,49 @@ $(document).ready(function() {
     if (i > 2) {
       i = 1;
     }
-    $(".dummyDivdisplay").hide();
   }); //-----------------firebase ref end
 
   $(document).on("click", ".showhidebtn", function() {
-    $(".dummyDivdisplay").toggle();
+    var uid = $(this).attr("uid");
+    firebase
+      .database()
+      .ref("/blogs/" + uid)
+      .on("value", function(res) {
+        var output = res.val();
+        sessionStorage.setItem("title", output.blogtitle);
+        sessionStorage.setItem("content", output.blogmessage);
+        sessionStorage.setItem("name", output.bloggername);
+        sessionStorage.setItem("date", output.date);
+      });
+
+    window.location = "./displayBlog.html";
+  });
+
+  $(document).on("click", ".editbtn", function() {
+    var eid = $(this).attr("eid");
+
+    firebase
+      .database()
+      .ref("/blogs/" + eid)
+      .on("value", function(res) {
+        var output = res.val();
+
+        sessionStorage.setItem("editTitle", output.blogtitle);
+        sessionStorage.setItem("editMessage", output.blogmessage);
+        sessionStorage.setItem("editName", output.bloggername);
+        sessionStorage.setItem("editDate", output.date);
+        sessionStorage.setItem("eid", eid);
+
+        window.location = "./create.html";
+      });
+  });
+
+  $(document).on("click", ".deletebtn", function() {
+    var dlid = $(this).attr("dlid");
+    firebase
+      .database()
+      .ref("/blogs/" + dlid)
+      .remove();
+    window.location = "./bloglist.html";
   });
 }); //------------------------document ready end
