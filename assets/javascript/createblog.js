@@ -33,12 +33,16 @@ $(document).ready(function() {
 
   function writetoDB() {
     var date = moment().format("YYYY/MM/DD");
-    database.ref("/blogs").push({
+    var data = database.ref("/blogs").push({
+      //date: date
+    });
+    var id = data.key;
+    database.ref("/blogs/" + id).set({
       blogtitle: blogTitle,
       blogmessage: blogMessage,
       bloggername: bloggerName,
-      date: date
-      //date: date
+      date: date,
+      id: id
     });
     reset();
     window.location = "./bloglist.html";
