@@ -8,11 +8,13 @@ $(document).ready(function() {
   var blogTitle = "";
   var blogMessage = "";
   var bloggerName = "";
-  var date = moment().format("MMM-DD-YYYY");
 
-  if (sessionStorage.getItem("eid") != null) {
+  if (
+    sessionStorage.getItem("eid") != null ||
+    sessionStorage.getItem("eid") != ""
+  ) {
     $("#blogtitle").val(sessionStorage.getItem("editTitle"));
-    $("#blogmessage").text(sessionStorage.getItem("editMessage"));
+    $("#blogmessage").val(sessionStorage.getItem("editMessage"));
     $("#bloggername").val(sessionStorage.getItem("editName"));
   }
 
@@ -36,7 +38,10 @@ $(document).ready(function() {
   }
 
   function writetoDB() {
-    if (sessionStorage.getItem("eid") === null) {
+    if (
+      sessionStorage.getItem("eid") === "" ||
+      sessionStorage.getItem("eid") === null
+    ) {
       var date = moment().format("YYYY/MM/DD");
       var data = database.ref("/blogs").push({
         //date: date
@@ -50,12 +55,19 @@ $(document).ready(function() {
         id: id
       });
     } else {
-      database.ref("/blogs/" + sessionStorage.getItem("eid")).set({
+      var eid = sessionStorage.getItem("eid");
+      var date = sessionStorage.getItem("editDate");
+      sessionStorage.setItem("eid", "");
+      sessionStorage.setItem("date", "");
+      sessionStorage.setItem("editTitle", "");
+      sessionStorage.setItem("editMessage", "");
+      sessionStorage.setItem("editName", "");
+      database.ref("/blogs/" + eid).set({
         blogtitle: blogTitle,
         blogmessage: blogMessage,
         bloggername: bloggerName,
-        date: sessionStorage.getItem("editDate"),
-        id: sessionStorage.getItem("eid")
+        date: date,
+        id: eid
       });
     }
     reset();

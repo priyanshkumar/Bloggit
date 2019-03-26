@@ -39,18 +39,24 @@ $(document).ready(function() {
 
     showhidebtn.addClass("showhidebtn btn btn-primary mr-2");
     showhidebtn.attr("uid", id);
-    showhidebtn.text("Show More");
+    showhidebtn.text("show more");
 
     var editbtn = $("<button>");
 
-    editbtn.addClass("editbtn btn btn-success");
+    editbtn.addClass("editbtn mr-2 btn btn-success");
     editbtn.attr("eid", id);
-    editbtn.text("Edit");
+    editbtn.text("edit");
+
+    var deletebtn = $("<button>");
+
+    deletebtn.addClass("deletebtn btn btn-danger");
+    deletebtn.attr("dlid", id);
+    deletebtn.text("delete");
 
     //seperate div for the blog message to aviod flexbox alignment
     publishedDetails.append(bloggernameDiv, blogdateDiv);
 
-    button.append(showhidebtn, editbtn);
+    button.append(showhidebtn, editbtn, deletebtn);
     bloglistsubDiv
       .append(blogtitleDiv)
       .append(publishedDetails)
@@ -99,5 +105,14 @@ $(document).ready(function() {
 
         window.location = "./create.html";
       });
+  });
+
+  $(document).on("click", ".deletebtn", function() {
+    var dlid = $(this).attr("dlid");
+    firebase
+      .database()
+      .ref("/blogs/" + dlid)
+      .remove();
+    window.location = "./bloglist.html";
   });
 }); //------------------------document ready end
