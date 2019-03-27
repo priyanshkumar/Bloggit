@@ -51,6 +51,13 @@ body {
   text-shadow: 2px 2px gray;
 }
 
+#focus {
+  background: url("../images/focus.jpg");
+  background-position: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px gray;
+}
 /* Footer */
 .footer-css {
   background-color: #e2e2e2;
@@ -78,10 +85,8 @@ body {
   border-bottom: 1px solid #b4b4b4;
   font-size: 14px;
   color: #0e0238;
-}
-.bloglistsubDiv {
-  font-weight: normal;
-  font-size: 16px;
+  line-height: 1.8;
+  width: 95%;
 }
 
 .savedblogsclass2 {
@@ -90,4 +95,21 @@ body {
   border-bottom: 1px solid #c7c6c6;
   font-size: 14px;
   color: #05220d;
+  line-height: 1.8;
+  width: 95%;
+}
+
+.bloglistsubDiv {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.apiheadline {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.apiauthor {
+  font-size: 12px;
+  color: rgb(5, 115, 189);
 }
