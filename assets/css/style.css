@@ -51,8 +51,28 @@ body {
   text-shadow: 2px 2px gray;
 }
 
+#createhead {
+  background: url("../images/createblog-image.png");
+  background-position: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px gray;
+}
+
 #focus {
   background: url("../images/focus.jpg");
+  background-position: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px gray;
+}
+
+#dispBlogs {
+  background-color: white;
+  border: 1px solid #ccc;
+}
+#displayblog-image {
+  background: url("../images/displayblogs-image.jpg");
   background-position: center;
   font-weight: bold;
   color: white;
@@ -77,6 +97,11 @@ body {
 .bg-content {
   font-size: 1.5rem;
   color: #707070;
+}
+
+.container-outer {
+  background-image: url(../images/tile.jpg);
+  background-repeat: repeat;
 }
 
 .savedblogsclass1 {
