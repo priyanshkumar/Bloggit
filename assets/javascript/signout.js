@@ -1,12 +1,11 @@
 $(document).ready(function() {
-  $("#user-signout").on("click", function() {
+  $("#userSignout").on("click", function() {
     firebase
       .auth()
       .signOut()
       .then(function() {
-        if (sessionStorage === null) {
-          window.location = "./index.html";
-        }
+        localStorage.setItem("LoginUID", "");
+        window.location = "./index.html";
       })
       .catch(function(error) {
         console.log(error);
