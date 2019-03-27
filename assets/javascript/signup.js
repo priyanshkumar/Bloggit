@@ -27,6 +27,7 @@ $(document).ready(function() {
               userName: userName
             });
           sessionStorage.setItem("userName", userName);
+          localStorage.setItem("LoginUID", user.uid);
         }
       })
       .then(function() {
