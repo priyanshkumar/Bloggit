@@ -4,7 +4,6 @@ $(document).ready(function() {
   database.ref("/blogs").on("child_added", function(snapshot) {
     var sv = snapshot.val();
     var blogTitle = sv.blogtitle;
-    var blogMessage = sv.blogmessage;
     var bloggerName = sv.bloggername;
     var blogDate = sv.date;
     var id = sv.id;

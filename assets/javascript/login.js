@@ -20,6 +20,7 @@ $(document).ready(function() {
           .then(function(snapshot) {
             $("#email").val("");
             var userName = snapshot.val().userName || "Anonymous";
+            localStorage.setItem("LoginUID", userId);
             sessionStorage.setItem("userName", userName);
             window.location = "./indexafterlogin.html";
           });
