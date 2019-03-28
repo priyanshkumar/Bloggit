@@ -1,6 +1,7 @@
 body {
-  font-family: "Merriweather", serif;
+  font-family: "Philosopher", sans-serif;
   line-height: 1.5;
+  font-size: 1.2rem;
 }
 
 /* bg img */
@@ -41,7 +42,8 @@ body {
 }
 
 .nav-div button {
-  font-size: 1.3rem;
+  background-color: #1894b1;
+  font-size: 1.1rem;
 }
 
 .nav-before-login {
@@ -56,13 +58,20 @@ body {
 }
 
 .nav-before-login button {
-  font-size: 1.3rem;
+  background-color: #1894b1;
+  font-size: 1.1rem;
 }
 
 #login-user,
 #create-user {
   font-family: "Unica One", cursive;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.buttn {
+  font-family: "Unica One", cursive;
+  font-size: 1.1rem;
 }
 
 #top-logo {
@@ -70,6 +79,7 @@ body {
 }
 
 #savedblogsbanner {
+  font-family: "Lobster", cursive;
   background: url("../images/tech-regulation.jpg");
   background-position: center;
   font-weight: bold;
@@ -78,6 +88,7 @@ body {
 }
 
 #createhead {
+  font-family: "Lobster", cursive;
   background: url("../images/createblog-image.png");
   background-position: center;
   font-weight: bold;
@@ -86,6 +97,7 @@ body {
 }
 
 #focus {
+  font-family: "Lobster", cursive;
   background: url("../images/focus.jpg");
   background-position: center;
   font-weight: bold;
