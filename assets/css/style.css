@@ -40,6 +40,10 @@ body {
   color: #8a8e92;
 }
 
+.nav-div button {
+  font-size: 1.3rem;
+}
+
 .nav-before-login {
   font-family: "Unica One", cursive;
   font-size: 1.3rem;
@@ -49,6 +53,16 @@ body {
 
 .nav-before-login a {
   color: #8a8e92;
+}
+
+.nav-before-login button {
+  font-size: 1.3rem;
+}
+
+#login-user,
+#create-user {
+  font-family: "Unica One", cursive;
+  font-size: 1.3rem;
 }
 
 #top-logo {
