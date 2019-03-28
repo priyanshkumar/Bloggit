@@ -110,6 +110,7 @@ body {
   border: 1px solid #ccc;
 }
 #displayblog-image {
+  font-family: "Lobster", cursive;
   background: url("../images/displayblogs-image.jpg");
   background-position: center;
   font-weight: bold;
@@ -176,4 +177,10 @@ body {
 .apiauthor {
   font-size: 12px;
   color: rgb(5, 115, 189);
+}
+
+.title {
+  font-style: italic;
+  font-family: "Viga", sans-serif;
+  font-size: 1.4rem;
 }
