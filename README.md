@@ -49,3 +49,5 @@ Bloggit gives you a chance to share your ideas to the world. Get creative and sh
 #### Build With:
 
 JavaScript, Firebase, Ajax, jQuery, HTML 5, CSS 3, Bootstrap, Google Fonts, moment.js.
+
+[checkout here](https://priyanshkumar.github.io/Bloggit/)
