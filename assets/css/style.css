@@ -184,3 +184,120 @@ body {
   font-family: "Viga", sans-serif;
   font-size: 1.4rem;
 }
+
+#toplogo {
+  width: 150px;
+}
+
+ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.cardsback {
+  background-color: rgb(23, 72, 206);
+  padding: 10px;
+}
+
+/* How-to-use row 1 */
+.main-heading {
+  background-color: #e6e7e7;
+}
+
+#how-to-use-row1 {
+  background-color: #ffffff;
+}
+
+.how-to-use-caption {
+  font-family: "Abel", sans-serif;
+}
+
+.caption-part1 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin-right: 30%;
+  margin-top: -22%;
+}
+
+.how-to-use-img img {
+  width: 100%;
+  height: 75%;
+}
+
+.how-to-use-content {
+  background: #000000;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.htur1-column-part1-1 {
+  margin-left: 3%;
+}
+
+.htur1-column-part1-2 {
+  margin-left: -9%;
+  margin-top: 9%;
+}
+
+.htur1-column-part2-2 {
+  margin-left: 3%;
+  margin-top: 9%;
+  z-index: 1;
+}
+
+.htur1-column-part2-1 {
+  margin-left: -9%;
+}
+
+.caption-part2 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin-left: 33%;
+  margin-top: -22%;
+}
+
+.caption-part3 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin-right: 20%;
+  margin-top: -22%;
+}
+
+.carousel-column {
+  background-color: #000000;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+/* About Scetion*/
+.about-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-img {
+  background: url(../images/hero-image.jpg);
+}
+
+/* About us */
+.about-img img {
+  margin-left: 5%;
+  width: 90%;
+  margin-top: -7%;
+  border-radius: 10%;
+}
+
+.about-card {
+  border-radius: 5%;
+  border: 1px solid #0e0238;
+}
+
+.about-body h5 {
+  font-size: 1.8rem;
+}
+
+/* Contact Page */
+#contact {
+  background-color: #0e0238;
+  color: #e2e2e2;
+}
