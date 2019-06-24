@@ -46,6 +46,7 @@ Bloggit gives you a chance to share your ideas to the world. Get creative and sh
 
 4. user could search for blogs on their focus of intrest on any topic.
 
-#### Build With:
+#### Built With:
 
-JavaScript, Firebase, Ajax, jQuery, HTML 5, CSS 3, Bootstrap, Google Fonts, moment.js,JSON,NYT API.
+JavaScript, Firebase, Ajax, jQuery, HTML 5, CSS 3, Bootstrap, Google Fonts, moment.js, JSON, NYT API.
+
