@@ -31,35 +31,36 @@ body {
 
 /* navigation */
 .nav-div {
-  font-family: "Unica One", cursive;
-  font-size: 1.3rem;
+  font-family: "Roboto Condensed", sans-serif;
   width: 98.756vw;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .nav-div a {
   color: #8a8e92;
+  font-size: 0.8rem;
 }
 
 .nav-div button {
   background-color: #1894b1;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 .nav-before-login {
-  font-family: "Unica One", cursive;
-  font-size: 1.3rem;
+  font-family: "Roboto Condensed", sans-serif;
   width: 100vw;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .nav-before-login a {
   color: #8a8e92;
+  font-size: 1rem;
 }
 
 .nav-before-login button {
+  font-family: "Roboto Condensed", sans-serif;
   background-color: #1894b1;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 #login-user,
