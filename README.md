@@ -30,21 +30,26 @@
 
 ```
 
-#### Site Description
+### Description
 
 Bloggit gives you a chance to share your ideas to the world. Get creative and showcase your interest...
 
-#### Site Functionality
+### Functionality
 
 1. Bloggit allows user to create their own profile!
 
+   ![login](images/login.jpg 'login')
+
 2. User could create blogs and save to the database.
+   ![create](images/create.jpg 'create')
 
 3. Blogs created by the user would be displayed as public and any one could edit or delete it.
+   ![blogs](images/blogs.jpg 'blogs')
 
    - In future we will build a system where user created blogs could be edited or deleted by the user only and could be just displayed publicly.
 
 4. user could search for blogs on their focus of intrest on any topic.
+    ![search](images/search.jpg 'search')
 
 #### Build With:
 
