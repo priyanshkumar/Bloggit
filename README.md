@@ -37,6 +37,7 @@ Bloggit gives you a chance to share your ideas to the world. Get creative and sh
 ### Functionality
 
 1. Bloggit allows user to create their own profile!
+
    ![login](images/login.jpg 'login')
 
 2. User could create blogs and save to the database.
